@@ -18,6 +18,9 @@
       <label>Enter Password</label>
     </div>
     <div>
+        <label *ngIf="!isLoggedIn">{{wrong}}</label>
+    </div>
+    <div>
         <!-- Content for when user is not logged in -->
         <div *ngIf="!isLoggedIn">
           <p>You are not logged in. Please log in to access the dashboard.</p>

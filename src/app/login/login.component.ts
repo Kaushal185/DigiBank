@@ -11,10 +11,13 @@ export class LoginComponent {
   isLoggedIn: boolean = false;
   name:string = '';
   pass:string = '';
+  wrong:string = '';
+  loginClicked:boolean = false;
   constructor(private authService: AuthService, private router: Router) {}
 
   login(username: string, password: string): void {
     this.isLoggedIn = this.authService.login(username, password);
+    this.loginClicked = true;
     console.log('inside login function');
     console.log(username);
     console.log(password);
@@ -22,6 +25,7 @@ export class LoginComponent {
       // Navigate to the dashboard on successful login
       this.router.navigate(['/home']);
     } else {
+      this.wrong = 'wrong username or password';
       // Handle unsuccessful login, e.g., show an error message
     }
   }
