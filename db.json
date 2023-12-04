@@ -2,6 +2,32 @@
     "users": [
       { "id": 1, "username": "kaushal", "password": "oracle" },
       { "id": 2, "username": "user2", "password": "password2" }
+    ],
+    "accounts": [
+      {
+        "id": 1,
+        "accountNumber": "123456789",
+        "name": "John Doe",
+        "accountType": "Savings",
+        "balanceAmount": 1500.75,
+        "date": "2023-12-01"
+      },
+      {
+        "id": 2,
+        "accountNumber": "987654321",
+        "name": "Jane Doe",
+        "accountType": "Checking",
+        "balanceAmount": 2500.50,
+        "date": "2023-12-02"
+      },
+      {
+        "id": 3,
+        "accountNumber": "123455555",
+        "name": "kaushal",
+        "accountType": "Savings",
+        "balanceAmount": 150000.75,
+        "date": "2023-12-01"
+      }
     ]
-}
+  }
   

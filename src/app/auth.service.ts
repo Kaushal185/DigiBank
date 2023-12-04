@@ -19,7 +19,7 @@ export class AuthService {
         const isValid = users.length > 0;
         if (isValid) {
           // Redirect to the home page or any desired route after successful login
-          this.router.navigate(['/home']);
+          this.router.navigate(['/account-details', username]);
         }
         return isValid;
       })

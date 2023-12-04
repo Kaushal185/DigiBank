@@ -1,54 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bank Account Details</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
+<!-- account-details.component.html -->
+<h1>Bank Account Details</h1>
 
-        h1 {
-            color: #3498db;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            border: 1px solid #3498db;
-            padding: 10px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #3498db;
-            color: #fff;
-        }
-    </style>
-</head>
-<body>
-
-    <h1>Bank Account Details</h1>
-
-    <table>
-        <tr>
-            <th>Account Number</th>
-            <th>Name</th>
-            <th>Date</th>
-        </tr>
-        <tr>
-            <td>123456789</td>
-            <td>John Doe</td>
-            <td>2023-12-01</td>
-        </tr>
-        <!-- Add more rows as needed -->
-    </table>
-
-</body>
-</html>
+<table>
+  <tr>
+    <th>Account Number</th>
+    <th>Name</th>
+    <th>Account Type</th>
+    <th>Balance Amount</th>
+    <th>Date</th>
+  </tr>
+  <tr *ngFor="let account of accounts">
+    <td>{{ account.accountNumber }}</td>
+    <td>{{ account.name }}</td>
+    <td>{{ account.accountType }}</td>
+    <td>{{ '$' + account.balanceAmount.toFixed(2) }}</td>
+    <td>{{ account.date | date }}</td>
+  </tr>
+</table>
