@@ -8,7 +8,7 @@ import { AccountService } from '../account.service';
 })
 export class AccountDetailsComponent implements OnInit {
   constructor(private accountService: AccountService) {}
-  accounts:any =[];
+  accounts:any = [];
   ngOnInit(): void {
     this.accountService.fetchAccounts().subscribe(
       (data: any[]) => {
