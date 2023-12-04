@@ -1,13 +1,13 @@
 {
     "users": [
       { "id": 1, "username": "kaushal", "password": "oracle" },
-      { "id": 2, "username": "user2", "password": "password2" }
+      { "id": 2, "username": "Jane Doe", "password": "password" }
     ],
     "accounts": [
       {
         "id": 1,
         "accountNumber": "123456789",
-        "name": "John Doe",
+        "name": "Jane Doe",
         "accountType": "Savings",
         "balanceAmount": 1500.75,
         "date": "2023-12-01"
