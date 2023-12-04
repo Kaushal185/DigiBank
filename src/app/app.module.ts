@@ -7,13 +7,15 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { AccountDetailsComponent } from './account-details/account-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    AccountDetailsComponent
   ],
   imports: [
     BrowserModule,
