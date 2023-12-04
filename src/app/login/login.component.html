@@ -1,45 +1,9 @@
-<div class="login-box">
-  <h2>Login</h2>
-  <form>
-    <div class="user-box">
-      <input
-        type="text"
-        [(ngModel)]="name"
-        [ngModelOptions]="{ standalone: true }"
-      />
-      <label>Enter Name</label>
-    </div>
-    <div class="user-box">
-      <input
-        type="password"
-        [(ngModel)]="pass"
-        [ngModelOptions]="{ standalone: true }"
-      />
-      <label>Enter Password</label>
-    </div>
-    <div>
-        <label *ngIf="!isLoggedIn">{{wrong}}</label>
-    </div>
-    <div>
-        <!-- Content for when user is not logged in -->
-        <div *ngIf="!isLoggedIn">
-          <p>You are not logged in. Please log in to access the dashboard.</p>
-          <button (click)="login(name,pass)">Login</button>
-        </div>
-      
-        <!-- Content for when user is logged in -->
-        <div *ngIf="isLoggedIn">
-          Welcome, User!
-          <button (click)="logout()">Logout</button>
-          <!-- Other UI elements for the logged-in state -->
-        </div>
-    </div>
+<div>
+  <label for="username">Username:</label>
+  <input type="text" id="username" [(ngModel)]="name" />
 
-  </form>
+  <label for="password">Password:</label>
+  <input type="password" id="password" [(ngModel)]="pass" />
+
+  <button (click)="login()">Login</button>
 </div>
-
-
-
-
-
-  

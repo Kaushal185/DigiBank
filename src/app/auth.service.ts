@@ -1,24 +1,32 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  name:string = 'kaushal';
-  pass:string = 'oracle';
-  isValid1:boolean = false;
-  isValid2:boolean = false;
-  constructor() { }
-   // Assume a simple authentication method for demonstration purposes
-   login(username: string, password: string): boolean {
-    // Your authentication logic goes here
-    // For simplicity, always return true in this example
-    if(username == 'kaushal'){
-      this.isValid2 = true;
-    }
-    if(password == 'oracle'){
-      this.isValid1 = true;
-    }
-    return (this.isValid1 && this.isValid2);
+  private baseUrl = 'http://localhost:3000';
+
+  constructor(private http: HttpClient, private router: Router) {}
+
+  login(username: string, password: string): Observable<boolean> {
+    const url = `${this.baseUrl}/users?username=${username}&password=${password}`;
+    return this.http.get<any[]>(url).pipe(
+      map(users => {
+        const isValid = users.length > 0;
+        if (isValid) {
+          // Redirect to the home page or any desired route after successful login
+          this.router.navigate(['/home']);
+        }
+        return isValid;
+      })
+    );
+  }
+
+  get(): number {
+    return 1;
   }
 }
