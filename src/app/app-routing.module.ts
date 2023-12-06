@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { AuthGuard } from './auth.guard';
+import { TransferComponent } from './transfer/transfer.component';
 
 const routes: Routes = [
   // { path: 'home', component: HomeComponent, canActivate: [AuthGuard],children:[] },
@@ -19,7 +20,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'navbar', component: NavbarComponent},
   { path: 'account-details/:username', component: AccountDetailsComponent},
+  { path:'transfer/:username',component:TransferComponent},
   { path: '', redirectTo: 'login', pathMatch: 'full' }
+  
 ];
 
 @NgModule({
