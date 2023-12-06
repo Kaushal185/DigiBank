@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { AuthGuard } from './auth.guard';
 import { TransferComponent } from './transfer/transfer.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   // { path: 'home', component: HomeComponent, canActivate: [AuthGuard],children:[] },
@@ -29,6 +30,8 @@ const routes: Routes = [
   { path: 'navbar', component: NavbarComponent },
 
   { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent }, // Wildcard route for "Page Not Found"
+
 ];
 
 @NgModule({
