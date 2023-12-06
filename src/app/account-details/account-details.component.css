@@ -1,0 +1,23 @@
+/* account-details.component.css */
+
+h1 {
+    color: #3498db;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #3498db;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #3498db;
+    color: #fff;
+  }
+  

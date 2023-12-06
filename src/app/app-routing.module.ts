@@ -9,10 +9,16 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
 import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  // { path: 'home', component: HomeComponent, canActivate: [AuthGuard],children:[] },
+  // { path: 'login', component: LoginComponent },
+  // { path: 'navbar', component: NavbarComponent, canActivate: [AuthGuard] },
+  // { path: 'account-details/:username', component: AccountDetailsComponent, canActivate: [AuthGuard] },
+  // { path: '', redirectTo: 'login', pathMatch: 'full' }
+
+  { path: 'home', component: HomeComponent},
   { path: 'login', component: LoginComponent },
-  { path: 'navbar', component: NavbarComponent, canActivate: [AuthGuard] },
-  { path: 'account-details/:username', component: AccountDetailsComponent, canActivate: [AuthGuard] },
+  { path: 'navbar', component: NavbarComponent},
+  { path: 'account-details/:username', component: AccountDetailsComponent},
   { path: '', redirectTo: 'login', pathMatch: 'full' }
 ];
 
