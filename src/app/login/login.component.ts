@@ -17,6 +17,7 @@ export class LoginComponent {
   login() {
     this.authService.login(this.name, this.pass).subscribe(
       (response) => {
+        //method login return response which passed in .subscribe.
         // Authentication successful, handle the response as needed
         console.log('Login successful', response);
       },
