@@ -16,17 +16,23 @@ const routes: Routes = [
   // { path: 'account-details/:username', component: AccountDetailsComponent, canActivate: [AuthGuard] },
   // { path: '', redirectTo: 'login', pathMatch: 'full' }
 
-  { path: 'home', component: HomeComponent},
+  {
+    path: 'home/:username',
+    component: HomeComponent,
+
+    children: [
+      { path: 'account-details', component: AccountDetailsComponent },
+      { path: 'transfer', component: TransferComponent },
+    ]
+  },
   { path: 'login', component: LoginComponent },
-  { path: 'navbar', component: NavbarComponent},
-  { path: 'account-details/:username', component: AccountDetailsComponent},
-  { path:'transfer/:username',component:TransferComponent},
-  { path: '', redirectTo: 'login', pathMatch: 'full' }
-  
+  { path: 'navbar', component: NavbarComponent },
+
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

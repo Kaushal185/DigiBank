@@ -17,8 +17,8 @@ export class AccountDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     // Get the username from the URL parameter
-    this.route.paramMap.subscribe((params) => {
-      this.username = params.get('username') || '';
+    this.route.parent?.params.subscribe((params) => {
+      this.username = params['username'] || '';
       // Fetch accounts based on the username
       this.accountService.fetchAccountsByUsername(this.username).subscribe(
         (data: any[]) => {

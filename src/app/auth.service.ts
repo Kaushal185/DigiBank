@@ -31,7 +31,7 @@ export class AuthService {
         if (isValid) {
           // Save authentication token to localStorage
           localStorage.setItem('authToken', 'yourAuthTokenHere');
-          this.router.navigate(['/account-details', username]);
+          this.router.navigate(['/home', username]);
           // Update isLoggedInValue based on authentication result
           this.isLoggedInValue = true;
         }
