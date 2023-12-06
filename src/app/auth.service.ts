@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   private baseUrl = 'http://localhost:3000';
+  private isLoggedInValue: boolean = false;
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -20,12 +21,20 @@ export class AuthService {
         if (isValid) {
           // Redirect to the home page or any desired route after successful login
           this.router.navigate(['/account-details', username]);
+          // Update isLoggedInValue based on authentication result
+          this.isLoggedInValue = true;
         }
         return isValid;
       })
     );
   }
 
+  // Check if the user is logged in
+  isLoggedIn(): boolean {
+    return this.isLoggedInValue;
+  }
+
+  // Placeholder for additional logic when needed
   get(): number {
     return 1;
   }
