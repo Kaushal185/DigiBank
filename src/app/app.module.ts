@@ -9,13 +9,15 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { CommonModule } from '@angular/common';
+import { TransferComponent } from './transfer/transfer.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavbarComponent,
     HomeComponent,
-    AccountDetailsComponent
+    AccountDetailsComponent,
+    TransferComponent
   ],
   imports: [
     BrowserModule,

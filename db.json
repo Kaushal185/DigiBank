@@ -1,32 +1,113 @@
 {
     "users": [
       { "id": 1, "username": "kaushal", "password": "oracle" },
-      { "id": 2, "username": "user2", "password": "password2" }
+      { "id": 2, "username": "Jane Doe", "password": "password2" }
     ],
     "accounts": [
       {
-        "id": 1,
-        "accountNumber": "123456789",
-        "name": "John Doe",
-        "accountType": "Savings",
-        "balanceAmount": 1500.75,
-        "date": "2023-12-01"
-      },
-      {
-        "id": 2,
+        "id": 4,
         "accountNumber": "987654321",
-        "name": "Jane Doe",
+        "name": "John Doe",
         "accountType": "Checking",
-        "balanceAmount": 2500.50,
-        "date": "2023-12-02"
+        "balanceAmount": 2500.50
       },
       {
-        "id": 3,
-        "accountNumber": "123455555",
+        "id": 5,
+        "accountNumber": "555555555",
+        "name": "Alice Wonderland",
+        "accountType": "Savings",
+        "balanceAmount": 3500.25
+      },
+      {
+        "id": 6,
+        "accountNumber": "444444444",
+        "name": "Bob Builder",
+        "accountType": "Checking",
+        "balanceAmount": 1200.30
+      },
+      {
+        "id": 7,
+        "accountNumber": "777777777",
+        "name": "Eve Explorer",
+        "accountType": "Savings",
+        "balanceAmount": 4200.90
+      },
+      {
+        "id": 8,
+        "accountNumber": "666666666",
+        "name": "Charlie Chaplin",
+        "accountType": "Checking",
+        "balanceAmount": 1800.60
+      },
+      {
+        "id": 9,
+        "accountNumber": "123455556",
         "name": "kaushal",
         "accountType": "Savings",
-        "balanceAmount": 150000.75,
-        "date": "2023-12-01"
+        "balanceAmount": 150000.76
+      },
+      {
+        "id": 10,
+        "accountNumber": "123455557",
+        "name": "kaushal",
+        "accountType": "Savings",
+        "balanceAmount": 150000.77
+      },
+      {
+        "id": 11,
+        "accountNumber": "123455558",
+        "name": "kaushal",
+        "accountType": "Savings",
+        "balanceAmount": 150000.78
+      },
+      {
+        "id": 12,
+        "accountNumber": "123455559",
+        "name": "kaushal",
+        "accountType": "Savings",
+        "balanceAmount": 150000.79
+      },
+      {
+        "id": 13,
+        "accountNumber": "123455560",
+        "name": "Rahul",
+        "accountType": "Savings",
+        "balanceAmount": 150000.80
+      },
+      {
+        "id": 14,
+        "accountNumber": "123455561",
+        "name": "Anthani",
+        "accountType": "Savings",
+        "balanceAmount": 150000.81
+      },
+      {
+        "id": 15,
+        "accountNumber": "123455562",
+        "name": "kaushal",
+        "accountType": "Savings",
+        "balanceAmount": 150000.82
+      },
+      {
+        "id": 16,
+        "accountNumber": "123455563",
+        "name": "kaushal",
+        "accountType": "Savings",
+        "balanceAmount": 150000.83
+      },
+      {
+        "id": 17,
+        "accountNumber": "123455564",
+        "name": "kaushal",
+        "accountType": "Savings",
+        "balanceAmount": 150000.84
+      },
+      {
+        "id": 18,
+        "accountNumber": "123455565",
+        "name": "kaushal",
+        "accountType": "Savings",
+        "balanceAmount": 150000.85
       }
     ]
   }
