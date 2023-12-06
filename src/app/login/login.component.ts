@@ -12,7 +12,6 @@ export class LoginComponent {
   name: string = '';
   pass: string = '';
   wrong: string = '';
-  loginClicked: boolean = false;
   constructor(private authService: AuthService, private router: Router) {}
 
   login() {
