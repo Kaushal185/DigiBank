@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { CommonModule } from '@angular/common';
 import { TransferComponent } from './transfer/transfer.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { TransferComponent } from './transfer/transfer.component';
     NavbarComponent,
     HomeComponent,
     AccountDetailsComponent,
-    TransferComponent
+    TransferComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@
       <div>
         <label for="fromAccount">From Account:</label>
         <select id="fromAccount" name="fromAccount" [(ngModel)]="fromAccount">
-          <option *ngFor="let account of accounts" [value]="account.accountNumber">{{ account.name }} ({{ account.accountNumber }})</option>
+          <option *ngFor="let account of fromAccountsArray" [value]="account.accountNumber">{{ account.name }} ({{ account.accountNumber }})</option>
         </select>
       </div>
   
