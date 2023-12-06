@@ -33,8 +33,8 @@ export class TransferComponent implements OnInit {
         console.error('Error fetching data:', error);
       }
     );
-    this.route.paramMap.subscribe((params) => {
-      this.username = params.get('username') || '';
+    this.route.parent?.params.subscribe((params) => {
+      this.username = params['username'] || '';
       // Fetch accounts based on the username
       this.accountService.fetchAccountsByUsername(this.username).subscribe(
         (data: any[]) => {
@@ -45,7 +45,6 @@ export class TransferComponent implements OnInit {
         }
       );
     });
-
   }
 
   transfer() {
