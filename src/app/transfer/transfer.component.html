@@ -1,6 +1,7 @@
 <!-- transfer.component.html -->
 
 <div>
+    <h2>Account Balance: {{balance}}</h2>
     <h2>Transfer Amount</h2>
     <form>
       <div>
@@ -21,7 +22,8 @@
         <label for="amount">Amount:</label>
         <input type="number" id="amount" name="amount" [(ngModel)]="amount" />
       </div>
-  
+
+      <button (click)="saveDetails()">Save</button>
       <button (click)="transfer()">Transfer</button>
     </form>
   </div>

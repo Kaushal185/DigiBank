@@ -1,242 +1,295 @@
 {
-    "users": [
-      { "id": 1, "username": "kaushal", "password": "oracle" },
-      { "id": 2, "username": "Jane Doe", "password": "password2" }
+  "users": [
+    {
+      "id": 1,
+      "username": "kaushal",
+      "password": "oracle"
+    },
+    {
+      "id": 2,
+      "username": "Hela",
+      "password": "password"
+    }
+  ],
+  "accounts": [
+    {
+      "id": 4,
+      "accountNumber": "987654321",
+      "name": "Hela",
+      "accountType": "Saving",
+      "balanceAmount": 2500.5,
+      "transactions": [
+        {
+          "fromAccount": "234654321",
+          "toAccount": "1234512345",
+          "amount": 100,
+          "id": 5
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "accountNumber": "912876541",
+      "name": "Robert",
+      "accountType": "Saving",
+      "balanceAmount": 2500.5,
+      "transactions": []
+    },
+    {
+      "id": 4,
+      "accountNumber": "967354321",
+      "name": "Ronnie",
+      "accountType": "Checking",
+      "balanceAmount": 2500.5,
+      "transactions": []
+    },
+    {
+      "id": 4,
+      "accountNumber": "936654321",
+      "name": "Earling",
+      "accountType": "Current",
+      "balanceAmount": 2500.5,
+      "transactions": []
+    },
+    {
+      "id": 4,
+      "accountNumber": "987768521",
+      "name": "Aren",
+      "accountType": "Checking",
+      "balanceAmount": 2500.5,
+      "transactions": [
+        {
+          "fromAccount": "234654321",
+          "toAccount": "1234512345",
+          "amount": 100,
+          "id": 5
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "accountNumber": "667654321",
+      "name": "Albert",
+      "accountType": "Current",
+      "balanceAmount": 2500.5,
+      "transactions": []
+    },
+    {
+      "id": 4,
+      "accountNumber": "984354321",
+      "name": "John",
+      "accountType": "Checking",
+      "balanceAmount": 2500.5,
+      "transactions": []
+    },
+    {
+      "id": 4,
+      "accountNumber": "234654321",
+      "name": "kaushal",
+      "accountType": "Saving",
+      "balanceAmount": 2500.5,
+      "transactions": []
+    },
+    {
+      "id": 4,
+      "accountNumber": "987333321",
+      "name": "Michael",
+      "accountType": "FixDiposit",
+      "balanceAmount": 2500.5,
+      "transactions": [
+        {
+          "fromAccount": "234654321",
+          "toAccount": "1234512345",
+          "amount": 100,
+          "id": 5
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "accountNumber": "1234512345",
+      "name": "Ron",
+      "accountType": "Checking",
+      "balanceAmount": 2500.5,
+      "transactions": [
+        {
+          "fromAccount": "234654321",
+          "toAccount": "1234512345",
+          "amount": 100,
+          "id": 5
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "accountNumber": "111654321",
+      "name": "John",
+      "accountType": "Checking",
+      "balanceAmount": 2500.5,
+      "transactions": [
+        {
+          "fromAccount": "234654321",
+          "toAccount": "1234512345",
+          "amount": 100,
+          "id": 5
+        }
+      ]
+    },
+    {
+      "fromAccount": "234654321",
+      "toAccount": "987333321",
+      "amount": 100,
+      "id": 5
+    },
+    [
+      [
+        {
+          "id": 4,
+          "accountNumber": "234654321",
+          "name": "kaushal",
+          "accountType": "Saving",
+          "balanceAmount": 2400.5,
+          "transactions": [
+            {
+              "fromAccount": "234654321",
+              "toAccount": "234654321",
+              "amount": 100,
+              "id": 1702017917342
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": 4,
+          "accountNumber": "967354321",
+          "name": "Ronnie",
+          "accountType": "Checking",
+          "balanceAmount": 2600.5,
+          "transactions": [
+            {
+              "fromAccount": "967354321",
+              "toAccount": "967354321",
+              "amount": 100,
+              "id": 1702017917342
+            }
+          ]
+        }
+      ]
     ],
-    "accounts": [
-      {
-        "id": 4,
-        "accountNumber": "987654321",
-        "name": "Hela",
-        "accountType": "Saving",
-        "balanceAmount": 2500.50,
-        "transactions": [
-          {
-            "id": 1,
-            "amount": 100.00,
-            "type": "Deposit",
-            "date": "2023-12-01"
-          },
-          {
-            "id": 2,
-            "amount": -50.00,
-            "type": "Withdrawal",
-            "date": "2023-12-02"
-          }
-        ]
-      },
-      
-      {
-        "id": 4,
-        "accountNumber": "912876541",
-        "name": "Robert",
-        "accountType": "Saving",
-        "balanceAmount": 2500.50,
-        "transactions": [
-          {
-            "id": 1,
-            "amount": 100.00,
-            "type": "Deposit",
-            "date": "2023-12-01"
-          },
-          {
-            "id": 2,
-            "amount": -50.00,
-            "type": "Withdrawal",
-            "date": "2023-12-02"
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "accountNumber": "967354321",
-        "name": "Ronnie",
-        "accountType": "Checking",
-        "balanceAmount": 2500.50,
-        "transactions": [
-          {
-            "id": 1,
-            "amount": 100.00,
-            "type": "FixDeposit",
-            "date": "2023-12-01"
-          },
-          {
-            "id": 2,
-            "amount": -50.00,
-            "type": "Withdrawal",
-            "date": "2023-12-02"
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "accountNumber": "936654321",
-        "name": "Earling",
-        "accountType": "Current",
-        "balanceAmount": 2500.50,
-        "transactions": [
-          {
-            "id": 1,
-            "amount": 100.00,
-            "type": "Deposit",
-            "date": "2023-12-01"
-          },
-          {
-            "id": 2,
-            "amount": -50.00,
-            "type": "Withdrawal",
-            "date": "2023-12-02"
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "accountNumber": "987768521",
-        "name": "Aren",
-        "accountType": "Checking",
-        "balanceAmount": 2500.50,
-        "transactions": [
-          {
-            "id": 1,
-            "amount": 100.00,
-            "type": "FixDeposit",
-            "date": "2023-12-01"
-          },
-          {
-            "id": 2,
-            "amount": -50.00,
-            "type": "Withdrawal",
-            "date": "2023-12-02"
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "accountNumber": "667654321",
-        "name": "Albert",
-        "accountType": "Current",
-        "balanceAmount": 2500.50,
-        "transactions": [
-          {
-            "id": 1,
-            "amount": 100.00,
-            "type": "Deposit",
-            "date": "2023-12-01"
-          },
-          {
-            "id": 2,
-            "amount": -50.00,
-            "type": "Withdrawal",
-            "date": "2023-12-02"
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "accountNumber": "984354321",
-        "name": "John",
-        "accountType": "Checking",
-        "balanceAmount": 2500.50,
-        "transactions": [
-          {
-            "id": 1,
-            "amount": 100.00,
-            "type": "Deposit",
-            "date": "2023-12-01"
-          },
-          {
-            "id": 2,
-            "amount": -50.00,
-            "type": "Withdrawal",
-            "date": "2023-12-02"
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "accountNumber": "234654321",
-        "name": "kaushal",
-        "accountType": "Saving",
-        "balanceAmount": 2500.50,
-        "transactions": [
-          {
-            "id": 1,
-            "amount": 100.00,
-            "type": "Deposit",
-            "date": "2023-12-01"
-          },
-          {
-            "id": 2,
-            "amount": -50.00,
-            "type": "Withdrawal",
-            "date": "2023-12-02"
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "accountNumber": "987333321",
-        "name": "Michael",
-        "accountType": "FixDiposit",
-        "balanceAmount": 2500.50,
-        "transactions": [
-          {
-            "id": 1,
-            "amount": 100.00,
-            "type": "Deposit",
-            "date": "2023-12-01"
-          },
-          {
-            "id": 2,
-            "amount": -50.00,
-            "type": "Withdrawal",
-            "date": "2023-12-02"
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "accountNumber": "1234512345",
-        "name": "Ron",
-        "accountType": "Checking",
-        "balanceAmount": 2500.50,
-        "transactions": [
-          {
-            "id": 1,
-            "amount": 100.00,
-            "type": "Deposit",
-            "date": "2023-12-01"
-          },
-          {
-            "id": 2,
-            "amount": -50.00,
-            "type": "Withdrawal",
-            "date": "2023-12-02"
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "accountNumber": "111654321",
-        "name": "John",
-        "accountType": "Checking",
-        "balanceAmount": 2500.50,
-        "transactions": [
-          {
-            "id": 1,
-            "amount": 100.00,
-            "type": "Deposit",
-            "date": "2023-12-01"
-          },
-          {
-            "id": 2,
-            "amount": -50.00,
-            "type": "Withdrawal",
-            "date": "2023-12-02"
-          }
-        ]
-      }
-
+    [
+      [
+        {
+          "id": 4,
+          "accountNumber": "234654321",
+          "name": "kaushal",
+          "accountType": "Saving",
+          "balanceAmount": 2000.5,
+          "transactions": [
+            {
+              "fromAccount": "234654321",
+              "toAccount": "234654321",
+              "amount": 500,
+              "id": 1702018056296
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": 4,
+          "accountNumber": "987333321",
+          "name": "Michael",
+          "accountType": "FixDiposit",
+          "balanceAmount": 3000.5,
+          "transactions": [
+            {
+              "fromAccount": "234654321",
+              "toAccount": "1234512345",
+              "amount": 100,
+              "id": 5
+            },
+            {
+              "fromAccount": "987333321",
+              "toAccount": "987333321",
+              "amount": 500,
+              "id": 1702018056296
+            }
+          ]
+        }
+      ]
+    ],
+    [
+      [
+        {
+          "id": 4,
+          "accountNumber": "234654321",
+          "name": "kaushal",
+          "accountType": "Saving",
+          "balanceAmount": 5000,
+          "transactions": [
+            {
+              "fromAccount": "234654321",
+              "toAccount": "234654321",
+              "amount": 3000,
+              "id": 1702018368166
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": 4,
+          "accountNumber": "667654321",
+          "name": "Albert",
+          "accountType": "Current",
+          "balanceAmount": 5500.5,
+          "transactions": [
+            {
+              "fromAccount": "667654321",
+              "toAccount": "667654321",
+              "amount": 3000,
+              "id": 1702018368166
+            }
+          ]
+        }
+      ]
+    ],
+    [
+      [
+        {
+          "id": 4,
+          "accountNumber": "234654321",
+          "name": "kaushal",
+          "accountType": "Saving",
+          "balanceAmount": 2000.5,
+          "transactions": [
+            {
+              "fromAccount": "234654321",
+              "toAccount": "234654321",
+              "amount": 500,
+              "id": 1702018556306
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "id": 4,
+          "accountNumber": "667654321",
+          "name": "Albert",
+          "accountType": "Current",
+          "balanceAmount": 3000.5,
+          "transactions": [
+            {
+              "fromAccount": "667654321",
+              "toAccount": "667654321",
+              "amount": 500,
+              "id": 1702018556306
+            }
+          ]
+        }
+      ]
     ]
-  }
-  
+  ]
+}

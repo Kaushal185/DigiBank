@@ -20,14 +20,14 @@ const routes: Routes = [
   {
     path: 'home/:username',
     component: HomeComponent,
-
+    canActivate:[AuthGuard],
     children: [
-      { path: 'account-details', component: AccountDetailsComponent },
-      { path: 'transfer', component: TransferComponent },
+      { path: 'account-details', component: AccountDetailsComponent,canActivate:[AuthGuard] },
+      { path: 'transfer', component: TransferComponent,canActivate:[AuthGuard] },
     ]
   },
   { path: 'login', component: LoginComponent },
-  { path: 'navbar', component: NavbarComponent },
+  { path: 'navbar', component: NavbarComponent,canActivate:[AuthGuard] },
 
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }, // Wildcard route for "Page Not Found"
