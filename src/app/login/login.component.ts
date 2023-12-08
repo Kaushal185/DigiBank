@@ -24,6 +24,7 @@ export class LoginComponent {
       (error) => {
         // Authentication failed, handle the error
         console.error('Login failed', error);
+        this.wrong = 'invalid credentials'
       }
     );
   }

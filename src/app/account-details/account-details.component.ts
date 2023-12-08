@@ -9,7 +9,6 @@ import { ActivatedRoute } from '@angular/router';
 export class AccountDetailsComponent implements OnInit {
   accounts: any[] = [];
   username: string = '';
-
   constructor(
     private accountService: AccountService,
     private route: ActivatedRoute

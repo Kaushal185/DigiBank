@@ -12,9 +12,12 @@ export class TransferComponent implements OnInit {
   fromAccount: string = '';
   toAccount: string = '';
   amount: number = 0;
-  accounts: any[] = [];
+  accounts: any = [];
   fromAccountsArray: any[] = [];
   username: string = '';
+  acc1:any = [];
+  acc2:any = [];
+  balance:number = 0;
 
   constructor(
     private http: HttpClient,
@@ -24,6 +27,7 @@ export class TransferComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+        // Validate if fromAccount, toAccount, and amount are valid
     this.accountService.fetchAccounts().subscribe(
       (data: any[]) => {
         this.accounts = data;
@@ -38,35 +42,104 @@ export class TransferComponent implements OnInit {
       this.accountService.fetchAccountsByUsername(this.username).subscribe(
         (data: any[]) => {
           this.fromAccountsArray = data;
+          this.balance = data[0].balanceAmount;
         },
         (error) => {
           console.error('Error fetching data:', error);
         }
       );
     });
-  }
 
-  transfer() {
-    // Validate if fromAccount, toAccount, and amount are valid
-    if (!this.fromAccount || !this.toAccount || this.amount <= 0) {
+    // this.transferService.getAmount1(
+    //   this.fromAccount,
+    //   this.amount
+    // ).subscribe(
+    //   (data:any[])=>{
+    //     this.acc1 = data;
+    //     console.log('Data of account1 is received',this.acc1);
+
+    //   },
+    //   (error)=>{
+    //     console.log('data not received from account1',error);
+    //   }
+    // );
+
+
+    // this.transferService.getAmount2(
+    //   this.toAccount,
+    //   this.amount
+    // ).subscribe(
+    //   (data:any[])=>{
+    //     this.acc2 = data;
+    //     console.log('Data of account2 is received',this.acc2);
+
+    //   },
+    //   (error)=>{
+    //     console.log('data not received from account2',error);
+    //   }
+    // );
+
+
+
+    // this.transferService.transferAmount2(this.acc1, this.acc2, this.amount).subscribe(
+    //   (result) => {
+    //     // Handle the result, which contains the updated account information
+    //     console.log('Transfer successful', result);
+    //   },
+    //   (error) => {
+    //     // Handle errors
+    //     console.log('loki');
+    //     console.error('Transfer failed', error);
+    //   }
+    // );
+  }
+  saveDetails(){
+    
+    if (!this.fromAccount || !this.toAccount || this.amount <= 0 || this.amount >100000 || this.amount > this.balance) {
       console.error('Invalid transfer data');
       return;
     }
-
-    // Call the transferAmount method from the AccountService
-    this.transferService.transferAmount(
+    this.transferService.getAmount1(
       this.fromAccount,
+      this.amount
+    ).subscribe(
+      (data:any[])=>{
+        this.acc1 = data;
+        console.log('Data of account1 is received',this.acc1);
+
+      },
+      (error)=>{
+        console.log('data not received from account1',error);
+      }
+    );
+
+    this.transferService.getAmount2(
       this.toAccount,
       this.amount
     ).subscribe(
-      (response) => {
-        console.log('Transfer successful', response);
-        // Handle success, update UI, etc.
+      (data:any[])=>{
+        this.acc2 = data;
+        console.log('Data of account2 is received',this.acc2);
+
       },
-      (error) => {
-        console.error('Transfer failed', error);
-        // Handle error, show error message, etc.
+      (error)=>{
+        console.log('data not received from account2',error);
       }
     );
+  }
+  transfer() {
+
+    this.transferService.transferAmount2(this.acc1, this.acc2, this.amount).subscribe(
+      (result) => {
+        // Handle the result, which contains the updated account information
+        console.log('Transfer successful', result);
+      },
+      (error) => {
+        // Handle errors
+        console.error('Transfer failed', error);
+      }
+    );
+    
+  
   }
 }
