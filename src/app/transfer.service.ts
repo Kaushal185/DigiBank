@@ -19,76 +19,51 @@ export class TransferService {
     return this.http.get<any[]>(url2);
   }
 
-  transferAmount(fromAccount: string, toAccount: string, amount: number): Observable<any> {
-    const url = `${this.baseUrl}/accounts`; // Replace with your transfer API endpoint
-    const transferData = {
-      fromAccount,
-      toAccount,
-      amount
-    };
-    return this.http.post<any>(url, transferData);
+  transferAmount1(acc1: any[], acc2: any[], amount: number): Observable<any> {
+    const specificDate = new Date(); // December 8, 2023, 14:30:00
+    const accountId = acc2[0].id;
+    const url = `${this.baseUrl}/accounts/${accountId}`
+    let fromAccount = acc1[0].accountNumber;
+    let toAccount = acc2[0].accountNumber;
+    acc2[0].balanceAmount += amount;
+    acc2[0].transactions.push(
+      {
+        from:fromAccount,
+        to:toAccount,
+        transcationAmount:amount,
+        time:specificDate
+      }
+    )
+    return this.http.put<any>(url, acc2[0]);
   }
   transferAmount2(acc1: any[], acc2: any[], amount: number): Observable<any> {
-    const accountId = acc1[0].id;
-    const url = `${this.baseUrl}/accounts/${accountId}`
+    const specificDate = new Date(); // December 8, 2023, 14:30:00
+    const accountId1 = acc1[0].id;
+    const accountId2 = acc2[0].id;
+    const url1 = `${this.baseUrl}/accounts/${accountId1}`
+    const url2 = `${this.baseUrl}/accounts/${accountId2}`
+
     let fromAccount = acc1[0].accountNumber;
     let toAccount = acc2[0].accountNumber;
     acc1[0].balanceAmount -= amount;
     acc2[0].balanceAmount += amount;
-    console.log('one');
-    // Update account balances and transactions
-    // let updatedAcc1 = this.updateAccountTransaction1(acc1, amount);
-    // let updatedAcc2 = this.updateAccountTransaction2(acc2, amount);
-    // Make actual API calls to update the server-side data
-    // let updateData = [updatedAcc1, updatedAcc2];
-    return this.http.put<any>(url, acc1[0]);
-  }
-
-  private updateAccountTransaction1(accounts: any[], amount: number): any[] {
-
-    accounts[0].balanceAmount -= amount;
-    accounts[0].transactions.push({
-      fromAccount: accounts[0].accountNumber,
-      toAccount: accounts[0].accountNumber,
-      amount:amount,
-      id: this.newTransactionId()
-    });
-    return accounts;
-  }
-  private updateAccountTransaction2(accounts: any[], amount: number): any[] {
-
-    accounts[0].balanceAmount += amount;
-    accounts[0].transactions.push({
-      fromAccount: accounts[0].accountNumber,
-      toAccount: accounts[0].accountNumber,
-      amount:amount,
-      id: this.newTransactionId()
-    });
-    return accounts;
-  }
-  // private updateAccountTransaction2(accounts: any[], amount: number): any[] {
-  //   const [fromAccount, toAccount] = accounts;
-
-  //   fromAccount.balanceAmount -= amount;
-  //   fromAccount.transactions.push({
-  //     fromAccount: fromAccount.accountNumber,
-  //     toAccount: toAccount.accountNumber,
-  //     amount,
-  //     id: this.newTransactionId()
-  //   });
-
-  //   toAccount.balanceAmount += amount;
-  //   toAccount.transactions.push({
-  //     fromAccount: fromAccount.accountNumber,
-  //     toAccount: toAccount.accountNumber,
-  //     amount,
-  //     id: this.newTransactionId()
-  //   });
-
-  //   return accounts;
-  // }
-
-  private newTransactionId(): number {
-    return Date.now();
+    acc1[0].transactions.push(
+      {
+        from:fromAccount,
+        to:toAccount,
+        transcationAmount:amount,
+        time:specificDate
+      }
+    )
+    acc2[0].transactions.push(
+      {
+        from:fromAccount,
+        to:toAccount,
+        transcationAmount:amount,
+        time:specificDate
+      }
+    )
+    this.http.put(url2,acc2[0]);
+    return this.http.put<any>(url1, acc1[0]);
   }
 }
