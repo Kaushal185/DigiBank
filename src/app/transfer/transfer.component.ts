@@ -103,7 +103,16 @@ export class TransferComponent implements OnInit {
         console.error('Transfer failed', error);
       }
     );
-
-
+    this.transferService.transferAmount1(this.acc1, this.acc2, this.amount).subscribe(
+      (result2:any) => {
+        // Handle the result, which contains the updated account information
+        console.log('Transfer successful', result2);
+        this.balance -= this.amount;
+      },
+      (error2:any) => {
+        // Handle errors
+        console.error('Transfer failed', error2);
+      }
+    );
   }
 }
