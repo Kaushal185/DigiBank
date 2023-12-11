@@ -29,8 +29,8 @@ export class TransferService {
     return this.http.post<any>(url, transferData);
   }
   transferAmount2(acc1: any[], acc2: any[], amount: number): Observable<any> {
- 
-    const url = `${this.baseUrl}/accounts/3`;
+    const accountId = acc1[0].id;
+    const url = `${this.baseUrl}/accounts/${accountId}`
     let fromAccount = acc1[0].accountNumber;
     let toAccount = acc2[0].accountNumber;
     acc1[0].balanceAmount -= amount;
