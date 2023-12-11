@@ -15,7 +15,7 @@
       "accountNumber": "987654321",
       "name": "Hela",
       "accountType": "Saving",
-      "balanceAmount": 2500.5,
+      "balanceAmount": 21500.5,
       "transactions": []
     },
     {
@@ -23,54 +23,14 @@
       "accountNumber": "999654321",
       "name": "kaushal",
       "accountType": "Saving",
-      "balanceAmount": 5900.5,
+      "balanceAmount": 34000.5,
       "transactions": [
         {
           "from": "999654321",
-          "to": "936654321",
-          "transcationAmount": 20
-        },
-        {
-          "from": "999654321",
-          "to": "987768521",
-          "transcationAmount": 30,
-          "time": "2023-12-11T05:36:11.686Z"
-        },
-        {
-          "from": "999654321",
           "to": "234654321",
-          "transcationAmount": 1000,
-          "time": "2023-12-11T06:00:02.212Z"
-        },
-        {
-          "from": "999654321",
-          "to": "234654321",
-          "transcationAmount": 1000,
-          "time": "2023-12-11T06:03:00.644Z"
-        },
-        {
-          "from": "999654321",
-          "to": "234654321",
-          "transcationAmount": 2000,
-          "time": "2023-12-11T06:10:04.471Z"
-        },
-        {
-          "from": "999654321",
-          "to": "234654321",
-          "transcationAmount": 1500,
-          "time": "2023-12-11T06:13:44.114Z"
-        },
-        {
-          "from": "999654321",
-          "to": "234654321",
-          "transcationAmount": 400,
-          "time": "2023-12-11T06:17:29.106Z"
-        },
-        {
-          "from": "999654321",
-          "to": "234654321",
-          "transcationAmount": 200,
-          "time": "2023-12-11T06:37:22.954Z"
+          "Amount": 5000,
+          "transferType": "Debit",
+          "time": "2023-12-11T09:58:41.840Z"
         }
       ]
     },
@@ -79,43 +39,21 @@
       "accountNumber": "234654321",
       "name": "Ramesh",
       "accountType": "Saving",
-      "balanceAmount": 3800.5,
+      "balanceAmount": 27800.5,
       "transactions": [
         {
-          "from": "234654321",
-          "to": "936654321",
-          "transcationAmount": 100,
-          "time": "2023-12-11T05:51:50.819Z"
-        },
-        {
-          "from": "234654321",
-          "to": "999654321",
-          "transcationAmount": 100,
-          "time": "2023-12-11T05:57:56.430Z"
+          "from": "999654321",
+          "to": "234654321",
+          "transcationAmount": 5000,
+          "transferType": "Dedit",
+          "time": "2023-12-11T09:58:41.840Z"
         },
         {
           "from": "999654321",
           "to": "234654321",
-          "transcationAmount": 1000,
-          "time": "2023-12-11T06:03:00.646Z"
-        },
-        {
-          "from": "999654321",
-          "to": "234654321",
-          "transcationAmount": 100,
-          "time": "2023-12-11T06:21:51.721Z"
-        },
-        {
-          "from": "999654321",
-          "to": "234654321",
-          "transcationAmount": 200,
-          "time": "2023-12-11T06:37:22.954Z"
-        },
-        {
-          "from": "999654321",
-          "to": "234654321",
-          "transcationAmount": 200,
-          "time": "2023-12-11T06:37:22.956Z"
+          "Amount": 5000,
+          "transferType": "Credit",
+          "time": "2023-12-11T09:58:41.841Z"
         }
       ]
     }

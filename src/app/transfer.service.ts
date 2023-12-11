@@ -30,7 +30,8 @@ export class TransferService {
       {
         from:fromAccount,
         to:toAccount,
-        transcationAmount:amount,
+        Amount:amount,
+        transferType:"Credit",
         time:specificDate
       }
     )
@@ -51,7 +52,8 @@ export class TransferService {
       {
         from:fromAccount,
         to:toAccount,
-        transcationAmount:amount,
+        Amount:amount,
+        transferType: "Debit",
         time:specificDate
       }
     )
@@ -60,6 +62,7 @@ export class TransferService {
         from:fromAccount,
         to:toAccount,
         transcationAmount:amount,
+        transferType: "Dedit",
         time:specificDate
       }
     )
