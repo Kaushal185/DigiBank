@@ -1,23 +1,10 @@
-/* account-details.component.css */
-
-h1 {
-    color: #3498db;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  th, td {
-    border: 1px solid #3498db;
-    padding: 10px;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #3498db;
-    color: #fff;
-  }
-  
+td:hover {
+  color: rgb(81, 22, 207);
+  background-color: #e0e0e0; /* Change this color to your desired hover color */
+  cursor: pointer; /* Optional: Change cursor to pointer for better indication */
+}
+.thead-dark th {
+  /* Additional styles for th elements inside the thead with dark background */
+  padding: 10px; /* Adjust padding as needed */
+  background-color: rgb(116, 6, 180);
+}

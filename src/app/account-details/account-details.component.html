@@ -1,5 +1,4 @@
-<!-- account-details.component.html -->
-<h1>Bank Account Details</h1>
+<!-- <h1>Bank Account Details</h1>
 <table>
   <tr>
     <th>Account Number</th>
@@ -13,4 +12,26 @@
     <td>{{ account.accountType }}</td>
     <td>{{ '$' + account.balanceAmount.toFixed(2) }}</td>
   </tr>
-</table>
+</table> -->
+
+<div class="container table-responsive py-5"> 
+  <table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>Account Number</th>
+        <th>Name</th>
+        <th>Account Type</th>
+        <th>Balance Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let account of accounts">
+        <td routerLink = "/transfer">{{ account.accountNumber }}</td>
+        <td>{{ account.name }}</td>
+        <td>{{ account.accountType }}</td>
+        <td>{{ '$' + account.balanceAmount.toFixed(2) }}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  

@@ -35,6 +35,7 @@ export class TransferComponent implements OnInit {
     this.accountService.fetchAccounts().subscribe(
       (data: any[]) => {
         this.accounts = data;
+        console.log("namaste india");
       },
       (error) => {
         console.error('Error fetching data:', error);
@@ -107,7 +108,6 @@ export class TransferComponent implements OnInit {
       (result2:any) => {
         // Handle the result, which contains the updated account information
         console.log('Transfer successful', result2);
-        this.balance -= this.amount;
       },
       (error2:any) => {
         // Handle errors

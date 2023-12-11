@@ -9,6 +9,7 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
 import { AuthGuard } from './auth.guard';
 import { TransferComponent } from './transfer/transfer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HistoryComponent } from './history/history.component';
 
 const routes: Routes = [
   // { path: 'home', component: HomeComponent, canActivate: [AuthGuard],children:[] },
@@ -24,6 +25,7 @@ const routes: Routes = [
     children: [
       { path: 'account-details', component: AccountDetailsComponent,canActivate:[AuthGuard] },
       { path: 'transfer', component: TransferComponent,canActivate:[AuthGuard] },
+      {path:'history',component:HistoryComponent}
     ]
   },
   { path: 'login', component: LoginComponent },

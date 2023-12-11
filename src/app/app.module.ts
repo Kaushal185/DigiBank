@@ -11,6 +11,10 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
 import { CommonModule } from '@angular/common';
 import { TransferComponent } from './transfer/transfer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HistoryComponent } from './history/history.component';
+import { MatTableModule } from '@angular/material/table';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,14 +23,17 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HomeComponent,
     AccountDetailsComponent,
     TransferComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    BrowserAnimationsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
