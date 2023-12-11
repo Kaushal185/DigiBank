@@ -7,7 +7,6 @@ import { Observable } from 'rxjs';
 })
 export class TransferService {
   private baseUrl = 'http://localhost:3000'; // Update with your server URL
-
   constructor(private http: HttpClient) {}
   getAmount1(fromAccount: string,amount: number): Observable<any> {
     console.log('Amount1');
@@ -20,27 +19,29 @@ export class TransferService {
     return this.http.get<any[]>(url2);
   }
 
-  // transferAmount(fromAccount: string, toAccount: string, amount: number): Observable<any> {
-  //   const url = `${this.baseUrl}/accounts`; // Replace with your transfer API endpoint
-  //   const transferData = {
-  //     fromAccount,
-  //     toAccount,
-  //     amount
-  //   };
-  //   return this.http.post<any>(url, transferData);
-  // }
+  transferAmount(fromAccount: string, toAccount: string, amount: number): Observable<any> {
+    const url = `${this.baseUrl}/accounts`; // Replace with your transfer API endpoint
+    const transferData = {
+      fromAccount,
+      toAccount,
+      amount
+    };
+    return this.http.post<any>(url, transferData);
+  }
   transferAmount2(acc1: any[], acc2: any[], amount: number): Observable<any> {
- 
-    const url = `${this.baseUrl}/accounts`;
+    const accountId = acc1[0].id;
+    const url = `${this.baseUrl}/accounts/${accountId}`
     let fromAccount = acc1[0].accountNumber;
     let toAccount = acc2[0].accountNumber;
+    acc1[0].balanceAmount -= amount;
+    acc2[0].balanceAmount += amount;
     console.log('one');
     // Update account balances and transactions
-    let updatedAcc1 = this.updateAccountTransaction1(acc1, amount);
-    let updatedAcc2 = this.updateAccountTransaction2(acc2, amount);
+    // let updatedAcc1 = this.updateAccountTransaction1(acc1, amount);
+    // let updatedAcc2 = this.updateAccountTransaction2(acc2, amount);
     // Make actual API calls to update the server-side data
-    let updateData = [updatedAcc1, updatedAcc2];
-    return this.http.post<any>(url, updateData);
+    // let updateData = [updatedAcc1, updatedAcc2];
+    return this.http.put<any>(url, acc1[0]);
   }
 
   private updateAccountTransaction1(accounts: any[], amount: number): any[] {

@@ -15,19 +15,23 @@ export class TransferComponent implements OnInit {
   accounts: any = [];
   fromAccountsArray: any[] = [];
   username: string = '';
-  acc1:any = [];
-  acc2:any = [];
-  balance:number = 0;
+  acc1: any = [];
+  acc2: any = [];
+  balance: number = 0;
 
   constructor(
     private http: HttpClient,
     private accountService: AccountService,
     private route: ActivatedRoute,
-    private transferService:TransferService
-  ) {}
+    private transferService: TransferService
+  ) { }
 
   ngOnInit(): void {
-        // Validate if fromAccount, toAccount, and amount are valid
+    this.onFromAccountChange();
+    this.onToAccountChange();
+  }
+  onToAccountChange() {
+    // Validate if fromAccount, toAccount, and amount are valid
     this.accountService.fetchAccounts().subscribe(
       (data: any[]) => {
         this.accounts = data;
@@ -36,12 +40,14 @@ export class TransferComponent implements OnInit {
         console.error('Error fetching data:', error);
       }
     );
-
+  }
+  onFromAccountChange() {
     this.route.parent?.params.subscribe((params) => {
       this.username = params['username'] || '';
       this.accountService.fetchAccountsByUsername(this.username).subscribe(
         (data: any[]) => {
           this.fromAccountsArray = data;
+          console.log(console.log(data[0].balanceAmount));
           this.balance = data[0].balanceAmount;
         },
         (error) => {
@@ -49,53 +55,10 @@ export class TransferComponent implements OnInit {
         }
       );
     });
-
-    // this.transferService.getAmount1(
-    //   this.fromAccount,
-    //   this.amount
-    // ).subscribe(
-    //   (data:any[])=>{
-    //     this.acc1 = data;
-    //     console.log('Data of account1 is received',this.acc1);
-
-    //   },
-    //   (error)=>{
-    //     console.log('data not received from account1',error);
-    //   }
-    // );
-
-
-    // this.transferService.getAmount2(
-    //   this.toAccount,
-    //   this.amount
-    // ).subscribe(
-    //   (data:any[])=>{
-    //     this.acc2 = data;
-    //     console.log('Data of account2 is received',this.acc2);
-
-    //   },
-    //   (error)=>{
-    //     console.log('data not received from account2',error);
-    //   }
-    // );
-
-
-
-    // this.transferService.transferAmount2(this.acc1, this.acc2, this.amount).subscribe(
-    //   (result) => {
-    //     // Handle the result, which contains the updated account information
-    //     console.log('Transfer successful', result);
-    //   },
-    //   (error) => {
-    //     // Handle errors
-    //     console.log('loki');
-    //     console.error('Transfer failed', error);
-    //   }
-    // );
   }
-  saveDetails(){
-    
-    if (!this.fromAccount || !this.toAccount || this.amount <= 0 || this.amount >100000 || this.amount > this.balance) {
+  saveDetails() {
+
+    if (!this.fromAccount || !this.toAccount || this.amount <= 0 || this.amount > 100000 || this.amount > this.balance) {
       console.error('Invalid transfer data');
       return;
     }
@@ -103,13 +66,13 @@ export class TransferComponent implements OnInit {
       this.fromAccount,
       this.amount
     ).subscribe(
-      (data:any[])=>{
+      (data: any[]) => {
         this.acc1 = data;
-        console.log('Data of account1 is received',this.acc1);
+        console.log('Data of account1 is received', this.acc1);
 
       },
-      (error)=>{
-        console.log('data not received from account1',error);
+      (error) => {
+        console.log('data not received from account1', error);
       }
     );
 
@@ -117,13 +80,13 @@ export class TransferComponent implements OnInit {
       this.toAccount,
       this.amount
     ).subscribe(
-      (data:any[])=>{
+      (data: any[]) => {
         this.acc2 = data;
-        console.log('Data of account2 is received',this.acc2);
+        console.log('Data of account2 is received', this.acc2);
 
       },
-      (error)=>{
-        console.log('data not received from account2',error);
+      (error) => {
+        console.log('data not received from account2', error);
       }
     );
   }
@@ -133,13 +96,14 @@ export class TransferComponent implements OnInit {
       (result) => {
         // Handle the result, which contains the updated account information
         console.log('Transfer successful', result);
+        this.balance -= this.amount;
       },
       (error) => {
         // Handle errors
         console.error('Transfer failed', error);
       }
     );
-    
-  
+
+
   }
 }
