@@ -6,14 +6,14 @@
     <form>
       <div>
         <label for="fromAccount">From Account:</label>
-        <select id="fromAccount" name="fromAccount" [(ngModel)]="fromAccount">
+        <select id="fromAccount" name="fromAccount" [(ngModel)]="fromAccount" (change)="onFromAccountChange()">
           <option *ngFor="let account of fromAccountsArray" [value]="account.accountNumber">{{ account.name }} ({{ account.accountNumber }})</option>
         </select>
       </div>
   
       <div>
         <label for="toAccount">To Account:</label>
-        <select id="toAccount" name="toAccount" [(ngModel)]="toAccount">
+        <select id="toAccount" name="toAccount" [(ngModel)]="toAccount" (change) = "onToAccountChange()">
           <option *ngFor="let account of accounts" [value]="account.accountNumber">{{ account.name }} ({{ account.accountNumber }})</option>
         </select>
       </div>
