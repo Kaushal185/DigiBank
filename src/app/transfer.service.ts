@@ -20,7 +20,7 @@ export class TransferService {
   }
 
   transferAmount1(acc1: any[], acc2: any[], amount: number): Observable<any> {
-    const specificDate = new Date(); // December 8, 2023, 14:30:00
+    const specificDate = new Date();
     const accountId = acc2[0].id;
     const url = `${this.baseUrl}/accounts/${accountId}`
     let fromAccount = acc1[0].accountNumber;

@@ -19,7 +19,7 @@
       "accountNumber": "987654321",
       "name": "Hela",
       "accountType": "Saving",
-      "balanceAmount": 40166.5,
+      "balanceAmount": 42140.5,
       "transactions": [
         {
           "id": 1,
@@ -97,6 +97,14 @@
           "Amount": 5000,
           "transferType": "Debit",
           "time": "2023-12-12T06:10:10.684Z"
+        },
+        {
+          "id": 387,
+          "from": "878543219",
+          "to": "987654321",
+          "Amount": 987,
+          "transferType": "Credit",
+          "time": "2023-12-12T06:31:46.802Z"
         }
       ]
     },
@@ -105,7 +113,7 @@
       "accountNumber": "999654321",
       "name": "kaushal",
       "accountType": "Saving",
-      "balanceAmount": 24490.5,
+      "balanceAmount": 19990.5,
       "transactions": [
         {
           "id": 1,
@@ -178,6 +186,14 @@
           "Amount": 5000,
           "transferType": "Credit",
           "time": "2023-12-12T06:10:10.685Z"
+        },
+        {
+          "id": 495,
+          "from": "999654321",
+          "to": "234654321",
+          "Amount": 4500,
+          "transferType": "Debit",
+          "time": "2023-12-12T06:38:52.051Z"
         }
       ]
     },
@@ -186,7 +202,7 @@
       "accountNumber": "234654321",
       "name": "Ramesh",
       "accountType": "Saving",
-      "balanceAmount": 51532.5,
+      "balanceAmount": 60532.5,
       "transactions": [
         {
           "id": 1,
@@ -289,6 +305,14 @@
           "Amount": 456,
           "transferType": "Credit",
           "time": "2023-12-12T06:08:00.653Z"
+        },
+        {
+          "id": 782,
+          "from": "999654321",
+          "to": "234654321",
+          "Amount": 4500,
+          "transferType": "Credit",
+          "time": "2023-12-12T06:38:52.052Z"
         }
       ]
     },
@@ -297,7 +321,7 @@
       "accountNumber": "878543219",
       "name": "kaushal",
       "accountType": "Current",
-      "balanceAmount": 17046.5,
+      "balanceAmount": 16059.5,
       "transactions": [
         {
           "id": 188,
@@ -330,6 +354,14 @@
           "Amount": 456,
           "transferType": "Debit",
           "time": "2023-12-12T06:08:00.653Z"
+        },
+        {
+          "id": 256,
+          "from": "878543219",
+          "to": "987654321",
+          "Amount": 987,
+          "transferType": "Debit",
+          "time": "2023-12-12T06:31:46.801Z"
         }
       ]
     },

@@ -41,6 +41,9 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
+
+    <h3>Account Balance {{balance}}</h3>
+
     <form>
       <div>
         <label for="fromAccount">From Account:</label>
@@ -60,7 +63,9 @@
         <label for="amount">Amount:</label>
         <input type="number" id="amount" name="amount" [(ngModel)]="amount" />
       </div>
-
+      <div class = "not">
+        <label *ngIf="amount > 1000000 || amount == 0">Enter amount between 1 to 999999</label>
+      </div>
       <button (click)="saveDetails()">Save</button>
       <button (click)="transfer()">Transfer</button>
     </form>

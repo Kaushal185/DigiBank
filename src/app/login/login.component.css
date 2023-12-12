@@ -7,16 +7,13 @@
 	font-family: Raleway, sans-serif;
 }
 
-body {
-	background: linear-gradient(90deg, #000, #000);		
-}
 
 .container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
-  background-color: #000;
+  background-color: #d4d2e2;
 }
 
 .screen {		
@@ -55,7 +52,7 @@ body {
 .screen__background__shape1 {
 	height: 520px;
 	width: 520px;
-	background: #000;	
+	background: #6956e3c7;	
 	top: -50px;
 	right: 120px;	
 	border-radius: 0 72px 0 0;
@@ -82,7 +79,7 @@ body {
 .screen__background__shape4 {
 	height: 200px;
 	width: 200px;
-	background: #540292;	
+	background: #140122;	
 	top: 420px;
 	right: 50px;	
 	border-radius: 60px;

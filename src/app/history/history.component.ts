@@ -38,10 +38,10 @@ export class HistoryComponent implements OnInit {
               allTransactions.push(...account.transactions);
             }
           });
-  
+          
           // Assign the combined transactions to dataSource.data
           this.dataSource.data = allTransactions;
-  
+          this.dataSource.sort = this.sort;
           console.log(allTransactions);
         },
         (error) => {
