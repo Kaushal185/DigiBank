@@ -10,21 +10,28 @@ import { AccountService } from '../account.service';
 })
 export class HistoryComponent implements OnInit {
   username: string = '';
-  constructor(private transferService: TransferService, private route: ActivatedRoute,private accountService: AccountService) { }
-  transactions: any[] = [];
+  accounts: any[] = []; // Assuming accounts is the array containing transactions
   displayedColumns: string[] = ['from', 'to', 'amount', 'transferType', 'time'];
-  dataSource = new MatTableDataSource<any>(this.transactions);
-  ngOnInit(): void {
+  dataSource = new MatTableDataSource<any>();
 
-  }
-  show(){
+  constructor(
+    private transferService: TransferService,
+    private route: ActivatedRoute,
+    private accountService: AccountService
+  ) {}
+
+  ngOnInit(): void {
     this.route.parent?.params.subscribe((params) => {
       this.username = params['username'] || '';
       console.log(this.username);
       this.accountService.fetchAccountsByUsername(this.username).subscribe(
         (data: any[]) => {
-          this.transactions = data;
-          console.log(this.transactions);
+          this.accounts = data;
+          if (this.accounts.length > 0) {
+            // Assuming the first account contains the transactions array
+            this.dataSource.data = this.accounts[0].transactions;
+          }
+          console.log(this.accounts);
         },
         (error) => {
           console.error('Error fetching data:', error);
@@ -32,5 +39,5 @@ export class HistoryComponent implements OnInit {
       );
     });
   }
-
 }
+
