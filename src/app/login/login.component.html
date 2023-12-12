@@ -20,8 +20,8 @@
 					<i class="login__icon fas fa-lock"></i>
 					<input type="password" class="login__input" placeholder="Password" id = "password" [(ngModel)]="pass">
 				</div>
+        <label *ngIf="wrong.length > 0 && flg == false" class="vali">{{wrong}}</label>
 				<button class="button login__submit">
-					<span class="button__text">Log In Now</span>
 					<i class="button__icon fas fa-chevron-right" (click) = "login()">Login</i>
 				</button>				
 			</div>

@@ -27,11 +27,19 @@ export class HistoryComponent implements OnInit {
       this.accountService.fetchAccountsByUsername(this.username).subscribe(
         (data: any[]) => {
           this.accounts = data;
-          if (this.accounts.length > 0) {
-            // Assuming the first account contains the transactions array
-            this.dataSource.data = this.accounts[0].transactions;
-          }
           console.log(this.accounts);
+          // Combine transactions from all accounts
+          const allTransactions: any[] = [];
+          this.accounts.forEach(account => {
+            if (account.transactions) {
+              allTransactions.push(...account.transactions);
+            }
+          });
+  
+          // Assign the combined transactions to dataSource.data
+          this.dataSource.data = allTransactions;
+  
+          console.log(allTransactions);
         },
         (error) => {
           console.error('Error fetching data:', error);
@@ -39,5 +47,6 @@ export class HistoryComponent implements OnInit {
       );
     });
   }
+  
 }
 

@@ -14,6 +14,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HistoryComponent } from './history/history.component';
 import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { MatTableModule } from '@angular/material/table';
     HttpClientModule,
     CommonModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

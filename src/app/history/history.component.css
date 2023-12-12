@@ -1,0 +1,12 @@
+/* Add this to your component's CSS or styles.scss */
+.hidden-xs {
+    display: none;
+  }
+  
+  /* Show on small screens */
+  @media only screen and (max-width: 600px) {
+    .hidden-xs {
+      display: table-cell !important;
+    }
+  }
+  

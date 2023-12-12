@@ -36,6 +36,7 @@ export class TransferService {
         time:specificDate
       }
     )
+    console.log("hasbhi liya karo paji");
     return this.http.put<any>(url, acc2[0]);
   }
   transferAmount2(acc1: any[], acc2: any[], amount: number): Observable<any> {
@@ -59,16 +60,7 @@ export class TransferService {
         time:specificDate
       }
     )
-    acc2[0].transactions.push(
-      {
-        from:fromAccount,
-        to:toAccount,
-        transcationAmount:amount,
-        transferType: "Dedit",
-        time:specificDate
-      }
-    )
-    this.http.put(url2,acc2[0]);
+    // this.http.put(url2,acc2[0]);
     return this.http.put<any>(url1, acc1[0]);
   }
 }
