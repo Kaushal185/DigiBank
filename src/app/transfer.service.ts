@@ -28,6 +28,7 @@ export class TransferService {
     acc2[0].balanceAmount += amount;
     acc2[0].transactions.push(
       {
+        id:Math.floor(Math.random() * 1000) + 1,
         from:fromAccount,
         to:toAccount,
         Amount:amount,
@@ -50,6 +51,7 @@ export class TransferService {
     acc2[0].balanceAmount += amount;
     acc1[0].transactions.push(
       {
+        id:Math.floor(Math.random() * 1000) + 1,
         from:fromAccount,
         to:toAccount,
         Amount:amount,
