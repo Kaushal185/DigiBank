@@ -9,4 +9,10 @@
       display: table-cell !important;
     }
   }
+  .helo{
+    margin: 30px;
+    padding:20px;
+    padding-top: 10;
+    box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.1);
+  }
   
