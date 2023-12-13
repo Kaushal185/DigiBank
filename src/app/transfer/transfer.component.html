@@ -63,6 +63,6 @@
       </div>
 
       <button (click)="saveDetails()">Save</button>
-      <button (click)="transfer()">Transfer</button>
+      <button [disabled]="amount >acc1.balanceAmount" (click)="transfer()">Transfer</button>
     </form>
 </body>

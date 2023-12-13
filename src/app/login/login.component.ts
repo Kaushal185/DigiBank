@@ -21,7 +21,7 @@ export class LoginComponent {
         //method login return response which passed in .subscribe.
         // Authentication successful, handle the response as needed
         console.log('Login successful', response);
-        this.wrong = 'invalid credentials';
+        this.wrong = 'Enter valid username or password';
         this.flg = this.authService.isLoggedIn();
         console.log(this.flg);
 
