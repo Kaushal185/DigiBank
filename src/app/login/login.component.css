@@ -16,7 +16,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
-  background-color: #000;
+  background-color: #fff;
 }
 
 .screen {		
@@ -25,7 +25,7 @@ body {
 	height: 450px;
 	width: 500px;	
 	box-shadow: 0px 0px 24px #5C5696;
-  background-color: #000;
+    background-color: #000;
 }
 
 .screen__content {
@@ -49,13 +49,13 @@ body {
 .screen__background__shape {
 	transform: rotate(45deg);
 	position: absolute;
-  background-color: #000;
+  background-color: #fff;
 }
 
 .screen__background__shape1 {
 	height: 520px;
 	width: 520px;
-	background: #000;	
+	background: #e9e4f3f7;	
 	top: -50px;
 	right: 120px;	
 	border-radius: 0 72px 0 0;
@@ -108,7 +108,7 @@ body {
 .login__input {
 	border: none;
 	border-bottom: 2px solid #fff;
-  color: #fff;
+  color: #000;
 	background: none;
 	padding: 10px;
 	padding-left: 24px;

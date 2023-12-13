@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from '../account.service';
 import { ActivatedRoute } from '@angular/router';
+import { CurrencyService } from '../currency.service';
 @Component({
   selector: 'app-account-details',
   templateUrl: './account-details.component.html',
@@ -9,9 +10,11 @@ import { ActivatedRoute } from '@angular/router';
 export class AccountDetailsComponent implements OnInit {
   accounts: any[] = [];
   username: string = '';
+  chooseCurrency = this.currencyService.getCurrencySymbol('INR');
   constructor(
     private accountService: AccountService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private currencyService:CurrencyService
   ) {}
 
   ngOnInit(): void {

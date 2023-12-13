@@ -5,12 +5,14 @@ import { AccountService } from '../account.service';
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { CurrencyService } from '../currency.service';
 @Component({
   selector: 'app-history',
   templateUrl: './history.component.html',
   styleUrls: ['./history.component.css']
 })
 export class HistoryComponent implements OnInit {
+  chooseCurrency = this.currencyService.getCurrencySymbol('INR');
   username: string = '';
   accounts: any[] = []; // Assuming accounts is the array containing transactions
   displayedColumns: string[] = ['from', 'to', 'amount', 'transferType', 'time'];
@@ -20,7 +22,8 @@ export class HistoryComponent implements OnInit {
   constructor(
     private transferService: TransferService,
     private route: ActivatedRoute,
-    private accountService: AccountService
+    private accountService: AccountService,
+    private currencyService:CurrencyService
   ) {}
 
   ngOnInit(): void {

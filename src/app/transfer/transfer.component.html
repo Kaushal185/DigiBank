@@ -59,6 +59,7 @@
       <div>
         <label for="amount">Amount:</label>
         <input type="number" id="amount" name="amount" [(ngModel)]="amount" />
+        <label *ngIf="amount ==0 || amount >= 1000000">Enter amount from 1 to 1000000</label>
       </div>
 
       <button (click)="saveDetails()">Save</button>

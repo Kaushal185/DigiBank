@@ -26,10 +26,10 @@
     </thead>
     <tbody>
       <tr *ngFor="let account of accounts">
-        <td routerLink = "/transfer">{{ account.accountNumber }}</td>
+        <td routerLink = "transfer">{{ account.accountNumber }}</td>
         <td>{{ account.name }}</td>
         <td>{{ account.accountType }}</td>
-        <td>{{ '$' + account.balanceAmount.toFixed(2) }}</td>
+        <td>{{chooseCurrency}} {{account.balanceAmount.toFixed(2)}}</td>
       </tr>
     </tbody>
   </table>
