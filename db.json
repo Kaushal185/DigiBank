@@ -13,8 +13,8 @@
       "password": "password"
     },
     {
-      "username":"Tom",
-      "password":"jerry"
+      "username": "Tom",
+      "password": "jerry"
     }
   ],
   "accounts": [
@@ -23,7 +23,7 @@
       "accountNumber": "987654321",
       "name": "Hela",
       "accountType": "Saving",
-      "balanceAmount": 60334.5,
+      "balanceAmount": 347406.5,
       "transactions": [
         {
           "id": 1,
@@ -149,6 +149,62 @@
           "Amount": 15000,
           "transferType": "Credit",
           "time": "2023-12-13T05:43:20.228Z"
+        },
+        {
+          "id": 495,
+          "from": "878543219",
+          "to": "987654321",
+          "Amount": 50,
+          "transferType": "Credit",
+          "time": "2023-12-13T09:07:41.720Z"
+        },
+        {
+          "id": 550,
+          "from": "878543219",
+          "to": "987654321",
+          "Amount": 30,
+          "transferType": "Credit",
+          "time": "2023-12-13T09:08:29.141Z"
+        },
+        {
+          "id": 844,
+          "from": "878543219",
+          "to": "987654321",
+          "Amount": 50000,
+          "transferType": "Credit",
+          "time": "2023-12-13T09:20:12.430Z"
+        },
+        {
+          "id": 408,
+          "from": "878543219",
+          "to": "987654321",
+          "Amount": 20000,
+          "transferType": "Credit",
+          "time": "2023-12-13T09:22:37.417Z"
+        },
+        {
+          "id": 421,
+          "from": "878543219",
+          "to": "987654321",
+          "Amount": 20000,
+          "transferType": "Credit",
+          "time": "2023-12-13T09:23:01.711Z"
+        },
+        {
+          "id": 421,
+          "from": "878543219",
+          "to": "987654321",
+          "Amount": 50000,
+          "transferType": "Credit",
+          "time": "2023-12-13T10:27:09.440Z"
+        },
+        {
+          "id": 91,
+          "from": "999654321",
+          "to": "987654321",
+          "Amount": 3456,
+          "transferType": "Credit",
+          "time": "2023-12-16T11:51:12.693Z"
         }
       ]
     },
@@ -157,7 +213,7 @@
       "accountNumber": "999654321",
       "name": "kaushal",
       "accountType": "Saving",
-      "balanceAmount": 124550.5,
+      "balanceAmount": 121094.5,
       "transactions": [
         {
           "id": 1,
@@ -270,6 +326,14 @@
           "Amount": 40000,
           "transferType": "Credit",
           "time": "2023-12-13T05:45:28.008Z"
+        },
+        {
+          "id": 312,
+          "from": "999654321",
+          "to": "987654321",
+          "Amount": 3456,
+          "transferType": "Debit",
+          "time": "2023-12-16T11:51:12.692Z"
         }
       ]
     },
@@ -278,7 +342,7 @@
       "accountNumber": "234654321",
       "name": "Ramesh",
       "accountType": "Saving",
-      "balanceAmount": 51932.5,
+      "balanceAmount": 53532.5,
       "transactions": [
         {
           "id": 1,
@@ -389,6 +453,22 @@
           "Amount": 200,
           "transferType": "Credit",
           "time": "2023-12-13T04:43:31.385Z"
+        },
+        {
+          "id": 179,
+          "from": "878543219",
+          "to": "234654321",
+          "Amount": 500,
+          "transferType": "Credit",
+          "time": "2023-12-13T09:19:52.849Z"
+        },
+        {
+          "id": 65,
+          "from": "878543219",
+          "to": "234654321",
+          "Amount": 300,
+          "transferType": "Credit",
+          "time": "2023-12-16T11:47:15.495Z"
         }
       ]
     },
@@ -397,7 +477,7 @@
       "accountNumber": "878543219",
       "name": "kaushal",
       "accountType": "Current",
-      "balanceAmount": 16747.5,
+      "balanceAmount": 750547.5,
       "transactions": [
         {
           "id": 188,
@@ -446,6 +526,94 @@
           "Amount": 99,
           "transferType": "Debit",
           "time": "2023-12-13T04:44:24.753Z"
+        },
+        {
+          "id": 803,
+          "from": "878543219",
+          "to": "987895432",
+          "Amount": 3000,
+          "transferType": "Debit",
+          "time": "2023-12-13T09:05:51.692Z"
+        },
+        {
+          "id": 821,
+          "from": "878543219",
+          "to": "987654321",
+          "Amount": 50,
+          "transferType": "Debit",
+          "time": "2023-12-13T09:07:41.719Z"
+        },
+        {
+          "id": 370,
+          "from": "878543219",
+          "to": "987654321",
+          "Amount": 30,
+          "transferType": "Debit",
+          "time": "2023-12-13T09:08:29.141Z"
+        },
+        {
+          "id": 523,
+          "from": "878543219",
+          "to": "987895432",
+          "Amount": 15,
+          "transferType": "Debit",
+          "time": "2023-12-13T09:09:07.613Z"
+        },
+        {
+          "id": 23,
+          "from": "878543219",
+          "to": "234654321",
+          "Amount": 500,
+          "transferType": "Debit",
+          "time": "2023-12-13T09:19:52.836Z"
+        },
+        {
+          "id": 466,
+          "from": "878543219",
+          "to": "987654321",
+          "Amount": 50000,
+          "transferType": "Debit",
+          "time": "2023-12-13T09:20:12.430Z"
+        },
+        {
+          "id": 888,
+          "from": "878543219",
+          "to": "987654321",
+          "Amount": 20000,
+          "transferType": "Debit",
+          "time": "2023-12-13T09:22:37.416Z"
+        },
+        {
+          "id": 855,
+          "from": "878543219",
+          "to": "987654321",
+          "Amount": 20000,
+          "transferType": "Debit",
+          "time": "2023-12-13T09:23:01.709Z"
+        },
+        {
+          "id": 99,
+          "from": "878543219",
+          "to": "987895432",
+          "Amount": 96000,
+          "transferType": "Debit",
+          "time": "2023-12-13T09:23:29.916Z"
+        },
+        {
+          "id": 698,
+          "from": "878543219",
+          "to": "987654321",
+          "Amount": 50000,
+          "transferType": "Debit",
+          "time": "2023-12-13T10:27:09.439Z"
+        },
+        {
+          "id": 359,
+          "from": "878543219",
+          "to": "234654321",
+          "Amount": 300,
+          "transferType": "Debit",
+          "time": "2023-12-16T11:47:15.494Z"
         }
       ]
     },
@@ -454,7 +622,7 @@
       "accountNumber": "987895432",
       "name": "Tom",
       "accountType": "FixDeposit",
-      "balanceAmount": 401696.5,
+      "balanceAmount": 599726.5,
       "transactions": [
         {
           "from": "878543219",
@@ -532,6 +700,30 @@
           "Amount": 40000,
           "transferType": "Debit",
           "time": "2023-12-13T05:45:28.007Z"
+        },
+        {
+          "id": 893,
+          "from": "878543219",
+          "to": "987895432",
+          "Amount": 3000,
+          "transferType": "Credit",
+          "time": "2023-12-13T09:05:51.692Z"
+        },
+        {
+          "id": 167,
+          "from": "878543219",
+          "to": "987895432",
+          "Amount": 15,
+          "transferType": "Credit",
+          "time": "2023-12-13T09:09:07.614Z"
+        },
+        {
+          "id": 321,
+          "from": "878543219",
+          "to": "987895432",
+          "Amount": 96000,
+          "transferType": "Credit",
+          "time": "2023-12-13T09:23:29.916Z"
         }
       ]
     }

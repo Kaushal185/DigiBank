@@ -1,33 +1,4 @@
-<!-- 
-<div>
-    <h2>Account Balance: {{balance}}</h2>
-    <h2>Transfer Amount</h2>
-    <form>
-      <div>
-        <label for="fromAccount">From Account:</label>
-        <select id="fromAccount" name="fromAccount" [(ngModel)]="fromAccount" (change)="onFromAccountChange()">
-          <option *ngFor="let account of fromAccountsArray" [value]="account.accountNumber">{{ account.name }} ({{ account.accountNumber }})</option>
-        </select>
-      </div>
-  
-      <div>
-        <label for="toAccount">To Account:</label>
-        <select id="toAccount" name="toAccount" [(ngModel)]="toAccount" (change) = "onToAccountChange()">
-          <option *ngFor="let account of accounts" [value]="account.accountNumber">{{ account.name }} ({{ account.accountNumber }})</option>
-        </select>
-      </div>
-  
-      <div>
-        <label for="amount">Amount:</label>
-        <input type="number" id="amount" name="amount" [(ngModel)]="amount" />
-      </div>
 
-      <button (click)="saveDetails()">Save</button>
-      <button (click)="transfer()">Transfer</button>
-    </form>
-  </div>
-  
-   -->
 <head>
   <!-- Design by foolishdeveloper.com -->
     <title>Glassmorphism login Form Tutorial in html css</title>
@@ -44,14 +15,14 @@
     <form>
       <div>
         <label for="fromAccount">From Account:</label>
-        <select id="fromAccount" name="fromAccount" [(ngModel)]="fromAccount">
+        <select id="fromAccount" name="fromAccount" [(ngModel)]="fromAccount" (change) = "onFromAccountChange()">
           <option *ngFor="let account of fromAccountsArray" [value]="account.accountNumber">{{ account.name }} ({{ account.accountNumber }})</option>
         </select>
       </div>
   
       <div>
         <label for="toAccount">To Account:</label>
-        <select id="toAccount" name="toAccount" [(ngModel)]="toAccount">
+        <select id="toAccount" name="toAccount" [(ngModel)]="toAccount" (change) = "onToAccountChange()">
           <option *ngFor="let account of accounts" [value]="account.accountNumber">{{ account.name }} ({{ account.accountNumber }})</option>
         </select>
       </div>
@@ -61,8 +32,7 @@
         <input type="number" id="amount" name="amount" [(ngModel)]="amount" />
         <label *ngIf="amount ==0 || amount >= 1000000">Enter amount from 1 to 1000000</label>
       </div>
-
-      <button (click)="saveDetails()">Save</button>
       <button [disabled]="amount >acc1.balanceAmount" (click)="transfer()">Transfer</button>
+      <label *ngIf="valo == true">Transaction Successful</label>
     </form>
 </body>

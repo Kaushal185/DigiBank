@@ -12,7 +12,7 @@ import { CurrencyService } from '../currency.service';
   styleUrls: ['./history.component.css']
 })
 export class HistoryComponent implements OnInit {
-  chooseCurrency = this.currencyService.getCurrencySymbol('INR');
+  chooseCurrency = this.currencyService.getCurrencySymbol('USD');
   username: string = '';
   accounts: any[] = []; // Assuming accounts is the array containing transactions
   displayedColumns: string[] = ['from', 'to', 'amount', 'transferType', 'time'];

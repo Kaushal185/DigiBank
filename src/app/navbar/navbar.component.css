@@ -3,7 +3,7 @@
 }
 
 .navbar {
-  background-color: #38186b; 
+  background-color: #8741f9; 
 }
 
 .navbar-brand {
@@ -45,4 +45,5 @@
   border: none;
   border-bottom: .15em solid rgb(196, 181, 181);
   border-radius: 20px;
-  padding: 0.65em 1.3em;}
+  padding: 0.65em 1.3em;
+}

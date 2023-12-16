@@ -1,13 +1,51 @@
-td:hover {
-  color: rgb(81, 22, 207);
-  background-color: #e0e0e0; /* Change this color to your desired hover color */
-  cursor: pointer; /* Optional: Change cursor to pointer for better indication */
+/* Custom styling for the card container */
+.container {
+  padding: 20px;
 }
-.thead-dark th {
-  /* Additional styles for th elements inside the thead with dark background */
-  padding: 10px; /* Adjust padding as needed */
-  background-color: rgb(116, 6, 180);
+
+/* Custom styling for the card */
+.custom-card {
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.container table-responsive py-5{
-  background-color: #e0e0e0;
+
+/* Custom styling for the card avatar */
+.card-avatar {
+  width: 32px;
+  height: 32px;
+  background-color: #9e77ed; /* Purple color */
+  border-radius: 50%;
+}
+
+/* Custom styling for the card title */
+mat-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1f1fbe; /* Dark blue color */
+}
+
+/* Custom styling for the card subtitle */
+mat-card-subtitle {
+  font-size: 14px;
+  color: #6a6a6a; /* Gray color */
+}
+
+/* Custom styling for the card content */
+mat-card-content {
+  padding: 10px 0;
+}
+
+/* Custom styling for the card actions */
+mat-card-actions {
+  justify-content: flex-end;
+}
+
+/* Custom styling for the primary button */
+button.mat-button {
+  background-color: #007bff; /* Blue color */
+  color: #fff;
+}
+
+button.mat-button:hover {
+  background-color: #0056b3; /* Darker blue color on hover */
 }

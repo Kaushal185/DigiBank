@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AccountService } from '../account.service';
 import { ActivatedRoute } from '@angular/router';
 import { CurrencyService } from '../currency.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-account-details',
   templateUrl: './account-details.component.html',
@@ -10,11 +12,12 @@ import { CurrencyService } from '../currency.service';
 export class AccountDetailsComponent implements OnInit {
   accounts: any[] = [];
   username: string = '';
-  chooseCurrency = this.currencyService.getCurrencySymbol('INR');
+  chooseCurrency = this.currencyService.getCurrencySymbol('USD');
   constructor(
     private accountService: AccountService,
     private route: ActivatedRoute,
-    private currencyService:CurrencyService
+    private currencyService:CurrencyService,
+    private router:Router
   ) {}
 
   ngOnInit(): void {
@@ -37,4 +40,8 @@ export class AccountDetailsComponent implements OnInit {
       );
     });
   }
+  transfer() {
+    this.router.navigate(['home',this.username,'transfer']);
+  }
+
 }

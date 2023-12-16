@@ -18,14 +18,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ### Components
 * LoginComponent
 * HomeComponent
-* AccountSummaryComponent
-* AccountDetailsComponent
+* AccountDetailsnt
+* TransferComponent
 * TransferComponent
 * PageNotFoundComponent
 ### Services
 * AuthService
-* AccountSummaryService
-* AccountDetailsService
+* AccountService
 * TransferService
 * CurrencyService
 ### Guard
